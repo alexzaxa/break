@@ -1,0 +1,21 @@
+SEO changes included
+====================
+- Greek page titles and descriptions targeting:
+  ξύλινο, ξύλινο καφέ, ξύλινο δήλεσι
+- Canonical URLs
+- LocalBusiness/Cafe/Restaurant structured data
+- robots.txt and sitemap.xml
+- Open Graph and Twitter metadata
+- Local SEO copy on homepage
+
+IMPORTANT BEFORE PUBLISHING
+===========================
+1. Replace the domain "https://xylinocafe.gr" everywhere if your real domain is different.
+2. Replace the placeholder phone number in the JSON-LD schema if you add one.
+3. Verify the site in Google Search Console.
+4. Submit: https://xylinocafe.gr/sitemap.xml
+5. Claim/verify the Google Business Profile and use the exact same name/address.
+6. Add the live website URL to the Google Business Profile.
+
+No website can guarantee first place in Google. Ranking depends on competition,
+Google Business Profile quality, reviews, proximity, authority, and indexing.

@@ -1,0 +1,8 @@
+Woody design treatment added
+=============================
+- Subtle wood-grain background
+- Dark premium wooden header and footer
+- Wooden-style buttons
+- Wood accents on cards and menu sections
+- Matching mobile navigation and loading screen
+- The effect is CSS-only, lightweight and responsive

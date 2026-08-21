@@ -1,0 +1,19 @@
+Real Sunset Replacement
+========================
+
+The illustrated sunset section has been replaced with a real seaside café photograph.
+
+Features:
+- Full-screen real sunset photography
+- Dark cinematic readability overlay
+- Very subtle GSAP camera movement
+- Mobile-specific crop
+- Reduced-motion fallback
+- Direct atmosphere call-to-action
+
+Temporary stock photograph:
+Uran Wang / Unsplash
+https://unsplash.com/photos/nx4N-D5Gk3Y
+Free to use under the Unsplash License.
+
+For the final production website, replace the temporary image with a real photo or video from Ξύλινο for maximum authenticity.

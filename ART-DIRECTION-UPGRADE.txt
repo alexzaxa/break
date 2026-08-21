@@ -1,0 +1,19 @@
+Art direction upgrade
+=====================
+This version addresses the harsh critique directly:
+
+- Clear identity in the first three seconds
+- Less glass and fewer generic UI cards
+- Sunrise-to-sunset narrative
+- Stronger warm food colors
+- Large memorable illustrated scenes
+- Signature menu products presented as hero moments
+- More controlled asymmetry
+- Stronger visit and trust sections
+- Mobile remains the primary design
+- Desktop expands from the same system
+- Performance-friendly CSS illustrations instead of heavy video
+
+Important:
+The review quotes included on the homepage are presentation placeholders.
+Replace them with verified Google reviews before publishing.

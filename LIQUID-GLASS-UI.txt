@@ -1,0 +1,14 @@
+Liquid Glass UI upgrade
+=======================
+- Original liquid-glass visual system
+- Modern floating navigation
+- Frosted glass cards and content panels
+- Softer shadows and gradient lighting
+- Improved mobile navigation
+- Better focus states and accessibility
+- Smooth page transitions
+- Subtle desktop depth effects
+- More refined menu hierarchy and pricing pills
+
+This design uses common modern interface principles and does not copy any
+single third-party website exactly.

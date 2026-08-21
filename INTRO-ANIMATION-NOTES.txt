@@ -1,0 +1,19 @@
+Ξύλινο Sunrise Intro
+=====================
+
+Added:
+- Cinematic wooden-door opening
+- Animated ΞΥΛΙΝΟ wordmark
+- Sunrise and sea-line reveal
+- Real loading progress animation
+- Skip button
+- Reduced-motion accessibility support
+- Session-based behavior: shown once per browser session
+- Pure CSS/JavaScript fallback if the animation library cannot load
+
+Library:
+Anime.js v4.4.1
+GitHub: https://github.com/juliangarnier/anime
+License: MIT
+
+The library is loaded through jsDelivr from the official npm release.

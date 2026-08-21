@@ -1,0 +1,21 @@
+Ξύλινο Cinematic Motion Upgrade
+================================
+
+Added:
+- Lenis smooth wheel scrolling on desktop
+- GSAP ScrollTrigger sunrise-to-night pinned story
+- Animated internal page transition panels
+- Page-specific transition titles
+- Magnetic desktop buttons
+- Scroll-triggered headings
+- Gentle scene parallax
+- Native mobile touch scrolling
+- Reduced-motion accessibility fallbacks
+
+Libraries:
+- Lenis 1.3.11 — MIT
+  https://github.com/darkroomengineering/lenis
+- GSAP 3.13.0
+  https://github.com/greensock/GSAP
+
+The existing Anime.js sunrise entrance remains in place.

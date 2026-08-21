@@ -1,0 +1,17 @@
+Mobile-first redesign
+=====================
+This version was rebuilt around the phone experience first.
+
+Key changes:
+- Full-screen mobile hero
+- Thumb-friendly menu and directions actions
+- Swipeable story cards
+- Compact popular-item list
+- Large touch targets
+- Mobile app-style bottom navigation
+- Header hides while scrolling down
+- Stronger emotional storytelling
+- Faster visual hierarchy
+- Less decorative clutter
+- Better safe-area handling
+- Desktop layout expands from the mobile system rather than replacing it

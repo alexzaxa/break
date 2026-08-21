@@ -1,0 +1,18 @@
+10/10 premium redesign
+=======================
+- Story-driven homepage instead of a generic content layout
+- Cinematic hero composition without using catalog photography
+- Clear food, drinks and location journey
+- Premium typography hierarchy
+- Signature menu highlights
+- Stronger mobile-first experience
+- Refined glass, wood, depth and lighting
+- Better CTA placement
+- Sticky/shrinking navigation
+- Scroll reveals, subtle parallax and magnetic buttons
+- Accessibility-friendly focus and reduced-motion support
+
+Before production:
+- Replace the placeholder domain in SEO metadata if needed.
+- Confirm the real business telephone number.
+- Add original business photography later for the strongest possible result.
