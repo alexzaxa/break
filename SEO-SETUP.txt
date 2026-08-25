@@ -10,10 +10,10 @@ SEO changes included
 
 IMPORTANT BEFORE PUBLISHING
 ===========================
-1. Replace the domain "https://xylinocafe.gr" everywhere if your real domain is different.
+1. Replace the domain "https://break-coffee-food.example" everywhere if your real domain is different.
 2. Replace the placeholder phone number in the JSON-LD schema if you add one.
 3. Verify the site in Google Search Console.
-4. Submit: https://xylinocafe.gr/sitemap.xml
+4. Submit: https://break-coffee-food.example/sitemap.xml
 5. Claim/verify the Google Business Profile and use the exact same name/address.
 6. Add the live website URL to the Google Business Profile.
 

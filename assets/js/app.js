@@ -41,16 +41,10 @@
   // Footer year.
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
-  // Live opening status. Business hours: daily 08:00-02:00, Europe/Athens time.
+  // Opening hours are intentionally not guessed; direct visitors to the verified phone number.
   const updateOpenStatus = () => {
-    const parts = new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Europe/Athens', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
-    }).formatToParts(new Date());
-    const hour = Number(parts.find((part) => part.type === 'hour')?.value || 0);
-    const minute = Number(parts.find((part) => part.type === 'minute')?.value || 0);
-    const now = hour * 60 + minute;
-    const isOpen = now >= 8 * 60 || now < 2 * 60;
-    const text = isOpen ? 'Ανοιχτά τώρα · έως 02:00' : 'Κλειστά · ανοίγει 08:00';
+    const isOpen = false;
+    const text = 'Καλέστε για ωράριο · 22951 52112';
 
     document.querySelectorAll('[data-open-status]').forEach((el) => { el.textContent = text; });
     document.querySelectorAll('.live-status').forEach((el) => {
@@ -59,7 +53,6 @@
     });
   };
   updateOpenStatus();
-  window.setInterval(updateOpenStatus, 60_000);
 
   // Scroll reveal.
   const reveals = [...document.querySelectorAll('.reveal')];
@@ -227,12 +220,12 @@
     footer.appendChild(legal);
   });
 
-  const consentKey = 'xylino-consent-v1';
+  const consentKey = 'break-consent-v1';
   const readConsent = () => { try { return JSON.parse(localStorage.getItem(consentKey)); } catch (_) { return null; } };
   const enableOptionalContent = () => {
     document.querySelectorAll('[data-map-src]').forEach((frame) => { if (!frame.src) frame.src = frame.dataset.mapSrc; });
     document.querySelectorAll('[data-map-consent]').forEach((notice) => { notice.hidden = true; });
-    window.dispatchEvent(new CustomEvent('xylino:analytics-consent'));
+    window.dispatchEvent(new CustomEvent('break:analytics-consent'));
   };
   const saveConsent = (analytics) => {
     localStorage.setItem(consentKey, JSON.stringify({ analytics, updated: new Date().toISOString() }));

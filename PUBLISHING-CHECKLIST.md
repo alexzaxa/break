@@ -1,21 +1,8 @@
 # Publishing checklist
 
-## Completed in this package
-- Fixed all food/drinks anchor navigation.
-- Added daily hours (08:00–02:00), phone, complete address and postal code 32009.
-- Added phone reservation buttons.
-- Added Instagram, Facebook, map and directions links.
-- Separated `drinks.html` from the new real `gallery.html`.
-- Added favicon, Apple touch icon, custom 404 page and JPG Open Graph image.
-- Expanded JSON-LD with telephone, hours, geo, sameAs, menu and acceptsReservations.
-- Expanded footer across every page.
-
-## Confirm with the business owner before final publishing
-- Opening hours may change seasonally or on public holidays.
-- Review cards use real public review excerpts, but public search only exposed reviewer initials. Replace initials with first names only after checking the live Google Business Profile.
-- Confirm takeaway and accessibility details.
-
-## After publishing
-- Verify Google Search Console and submit `/sitemap.xml`.
-- Add `https://xylinocafe.gr/` to the Google Business Profile.
-- Test Open Graph previews and mobile Lighthouse performance.
+- Replace the placeholder domain `https://break-coffee-food.example` in `sitemap.xml`, `robots.txt` and `SEO-SETUP.txt` with the real production domain.
+- Confirm the current menu, prices and opening hours with the business owner before adding them.
+- Confirm permission to publish the business Facebook link and contact details.
+- Add the live website URL to the Google Business Profile.
+- Test the phone, Google Maps and Facebook links on the production site.
+- Confirm that the host applies the security rules in `_headers`.

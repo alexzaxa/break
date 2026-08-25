@@ -8,7 +8,7 @@
 6. sitemap.xml: updated with every indexable page.
 7. Custom 404: retained and changed to `noindex,follow`.
 8. Alt text: verified all content images have descriptive Greek alternatives.
-9. Analytics: consent-gated integration hook added; connect a provider to the `xylino:analytics-consent` event before launch if analytics are required.
+9. Analytics: consent-gated integration hook added; connect a provider to the `break:analytics-consent` event before launch if analytics are required.
 10. Meta titles: unique titles are present on every indexable page.
 11. Meta descriptions: unique descriptions are present on every indexable page.
 12. Social share: Open Graph and X metadata use the existing 1200×630 cover.
