@@ -219,4 +219,49 @@
   updateBackToTop();
   window.addEventListener('scroll', updateBackToTop, { passive: true });
   backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+  document.querySelectorAll('.site-footer .footer-grid').forEach((footer) => {
+    const legal = document.createElement('div');
+    legal.className = 'footer-legal';
+    legal.innerHTML = '<h3>Πληροφορίες</h3><a href="faq.html">Συχνές ερωτήσεις</a><a href="privacy.html">Απόρρητο</a><a href="terms.html">Όροι χρήσης</a><button type="button" data-cookie-settings>Ρυθμίσεις cookies</button>';
+    footer.appendChild(legal);
+  });
+
+  const consentKey = 'xylino-consent-v1';
+  const readConsent = () => { try { return JSON.parse(localStorage.getItem(consentKey)); } catch (_) { return null; } };
+  const enableOptionalContent = () => {
+    document.querySelectorAll('[data-map-src]').forEach((frame) => { if (!frame.src) frame.src = frame.dataset.mapSrc; });
+    document.querySelectorAll('[data-map-consent]').forEach((notice) => { notice.hidden = true; });
+    window.dispatchEvent(new CustomEvent('xylino:analytics-consent'));
+  };
+  const saveConsent = (analytics) => {
+    localStorage.setItem(consentKey, JSON.stringify({ analytics, updated: new Date().toISOString() }));
+    document.querySelector('[data-cookie-banner]')?.remove();
+    if (analytics) enableOptionalContent();
+  };
+  const showConsent = () => {
+    document.querySelector('[data-cookie-banner]')?.remove();
+    const banner = document.createElement('section');
+    banner.className = 'cookie-banner'; banner.dataset.cookieBanner = ''; banner.setAttribute('aria-label', 'Επιλογές cookies');
+    banner.innerHTML = '<div><strong>Η ιδιωτικότητά σας</strong><p>Χρησιμοποιούμε απαραίτητη τοπική αποθήκευση. Ο χάρτης και τυχόν ανώνυμα στατιστικά ενεργοποιούνται μόνο αν τα αποδεχθείτε. <a href="privacy.html">Μάθετε περισσότερα</a>.</p></div><div class="cookie-actions"><button class="btn btn-dark" type="button" data-cookie-reject>Μόνο απαραίτητα</button><button class="btn btn-primary" type="button" data-cookie-accept>Αποδοχή</button></div>';
+    body.appendChild(banner);
+    banner.querySelector('[data-cookie-reject]').addEventListener('click', () => saveConsent(false));
+    banner.querySelector('[data-cookie-accept]').addEventListener('click', () => saveConsent(true));
+  };
+  const storedConsent = readConsent();
+  if (!storedConsent) showConsent(); else if (storedConsent.analytics) enableOptionalContent();
+  document.querySelectorAll('[data-cookie-settings]').forEach((button) => button.addEventListener('click', showConsent));
+  document.querySelector('[data-enable-map]')?.addEventListener('click', () => saveConsent(true));
+
+  const inquiryForm = document.querySelector('[data-inquiry-form]');
+  inquiryForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const status = inquiryForm.querySelector('[data-form-status]');
+    if (!inquiryForm.checkValidity()) { inquiryForm.reportValidity(); if (status) status.textContent = 'Ελέγξτε τα υποχρεωτικά πεδία.'; return; }
+    const data = new FormData(inquiryForm);
+    const subject = encodeURIComponent(`Αίτημα από ${data.get('name')}`);
+    const message = encodeURIComponent(`Όνομα: ${data.get('name')}\nΤηλέφωνο: ${data.get('phone')}\n\n${data.get('message')}`);
+    if (status) status.textContent = 'Ανοίγει η εφαρμογή email…';
+    window.location.href = `mailto:?subject=${subject}&body=${message}`;
+  });
 })();
