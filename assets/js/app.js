@@ -7,6 +7,37 @@
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Branded first-visit intro. Session storage prevents it replaying on every page return.
+  const intro = document.querySelector('[data-site-intro]');
+  if (intro) {
+    let introSeen = false;
+    let introFinished = false;
+    try { introSeen = sessionStorage.getItem('break-intro-seen') === '1'; } catch (_) { /* Storage can be unavailable. */ }
+
+    const revealSite = () => {
+      if (introFinished) return;
+      introFinished = true;
+      body.classList.add('site-ready');
+      body.classList.remove('intro-active');
+      intro.classList.add('is-leaving');
+      window.setTimeout(() => intro.remove(), reduceMotion ? 0 : 650);
+    };
+
+    if (introSeen || reduceMotion) {
+      intro.remove();
+      body.classList.add('site-ready');
+    } else {
+      body.classList.add('intro-active');
+      try { sessionStorage.setItem('break-intro-seen', '1'); } catch (_) { /* Continue without persistence. */ }
+      const startExit = () => window.setTimeout(revealSite, 1450);
+      if (document.readyState === 'complete') startExit();
+      else window.addEventListener('load', startExit, { once: true });
+      window.setTimeout(revealSite, 3500);
+    }
+  } else {
+    body.classList.add('site-ready');
+  }
+
 
   // Mobile navigation.
   const setMenu = (open) => {
@@ -36,7 +67,6 @@
   // Header state.
   const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 14);
   updateHeader();
-  window.addEventListener('scroll', updateHeader, { passive: true });
 
   // Footer year.
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
@@ -210,8 +240,17 @@
 
   const updateBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 650);
   updateBackToTop();
-  window.addEventListener('scroll', updateBackToTop, { passive: true });
-  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+  let scrollUpdateQueued = false;
+  window.addEventListener('scroll', () => {
+    if (scrollUpdateQueued) return;
+    scrollUpdateQueued = true;
+    window.requestAnimationFrame(() => {
+      updateHeader();
+      updateBackToTop();
+      scrollUpdateQueued = false;
+    });
+  }, { passive: true });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'auto' }));
 
   document.querySelectorAll('.site-footer .footer-grid').forEach((footer) => {
     const legal = document.createElement('div');
