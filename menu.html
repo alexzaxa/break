@@ -75,34 +75,161 @@
 </div>
 </div>
 </section>
-<section class="construction-notice" aria-labelledby="food-menu-status">
-<div class="container construction-card">
-<div class="construction-icon" aria-hidden="true"><span>🚧</span></div>
+<section class="menu-tools" id="menu-list">
+<div class="container">
+<div class="menu-search">
+<label for="menu-search-input">Αναζήτηση στο menu</label>
 <div>
-<p class="eyebrow">ΣΥΝΤΟΜΑ ΚΟΝΤΑ ΣΑΣ</p>
-<h2 id="food-menu-status">Το menu Pizza &amp; Food είναι υπό κατασκευή.</h2>
-<p>Ετοιμάζουμε όλες τις επιλογές και τις τιμές. Μέχρι να ολοκληρωθεί, καλέστε μας για το σημερινό menu και τη διαθεσιμότητα.</p>
+<input id="menu-search-input" type="search" placeholder="π.χ. pizza, burger, hot dog..." autocomplete="off" data-menu-search>
+<button type="button" data-clear-search aria-label="Καθαρισμός αναζήτησης">×</button>
 </div>
-<a class="btn btn-primary" href="tel:+302295152112">Ρώτησε μας ↗</a>
+<p aria-live="polite" data-search-status></p>
+</div>
+<nav class="category-chips" aria-label="Κατηγορίες">
+<a href="#salads" data-category-link>ΣΑΛΑΤΕΣ</a>
+<a href="#pizza" data-category-link>ΠΙΤΣΕΣ</a>
+<a href="#peinirli" data-category-link>ΠΕΪΝΙΡΛΙ</a>
+<a href="#burgers" data-category-link>BURGER</a>
+<a href="#club-sandwich" data-category-link>CLUB SANDWICH</a>
+<a href="#snacks" data-category-link>SNACKS</a>
+<a href="#hot-dog" data-category-link>HOT DOG</a>
+<a href="#sandwiches" data-category-link>ΣΑΝΤΟΥΙΤΣ</a>
+</nav>
 </div>
 </section>
-<section class="container offering-grid" id="food">
-<article>
-<span>01</span>
-<h2>Pizza</h2>
-<p>Φρεσκοψημένες επιλογές με ζύμη που ετοιμάζουμε εμείς στον χώρο μας. Ρωτήστε μας για γεύσεις, μεγέθη και τιμές.</p>
-</article>
-<article>
-<span>02</span>
-<h2>Coffee</h2>
-<p>Ζεστοί και κρύοι καφέδες για το καθημερινό σας break.</p>
-</article>
-<article>
-<span>03</span>
-<h2>Food</h2>
-<p>Γρήγορες επιλογές φαγητού. Η διαθεσιμότητα επιβεβαιώνεται τηλεφωνικά.</p>
-</article>
+<div class="container menu-page-layout">
+
+<section class="menu-section reveal" id="salads" data-menu-section>
+<div class="menu-section-title"><div><span>01</span><h2>ΣΑΛΑΤΕΣ</h2></div><small>3 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Χωριάτικη</h3><p>Τομάτα, αγγούρι, πιπεριά, φέτα, ελιά, λάδι, ρίγανη</p></div><strong>€7,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Σεφ</h3><p>Μαρούλι, τομάτα, παρμεζάνα, αυγό, κρουτόν, σως, αγγούρι, ζαμπόν</p></div><strong>€7,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Caesar's</h3><p>Μαρούλι, αγγούρι, κρουτόν, κοτόπουλο, μπέικον, παρμεζάνα, σως</p></div><strong>€8,00</strong></article>
+</div>
 </section>
+
+<section class="menu-section reveal" id="pizza" data-menu-section>
+<div class="menu-section-title"><div><span>02</span><p>Με φρέσκια και χειροποίητη ζύμη</p><h2>ΠΙΤΣΕΣ</h2></div><small>9 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Μαργαρίτα</h3><p>Σάλτσα τομάτα, μοτσαρέλα</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€7,00</strong></div><div><small>Μεγάλη</small><strong>€10,00</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Pepperone</h3><p>Σάλτσα τομάτα, τυρί, πεπερόνι</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,00</strong></div><div><small>Μεγάλη</small><strong>€11,00</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Σουτζούκι</h3><p>Σάλτσα τομάτα, τυρί, μπέικον, σουτζούκι, μανιτάρια, πιπεριά</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,50</strong></div><div><small>Μεγάλη</small><strong>€12,50</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Σπέσιαλ</h3><p>Σάλτσα τομάτα, τυρί, ζαμπόν, μπέικον, μανιτάρια, πιπεριά</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,00</strong></div><div><small>Μεγάλη</small><strong>€12,00</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Χωριάτικη</h3><p>Σάλτσα τομάτα, μανιτάρια, πιπεριά, ελιά, κρεμμύδι, φέτα, ρίγανη</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,00</strong></div><div><small>Μεγάλη</small><strong>€11,00</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Le poulet</h3><p>Σάλτσα τομάτα, κοτόπουλο, μανιτάρια, πιπεριά</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,00</strong></div><div><small>Μεγάλη</small><strong>€12,00</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Hot Dog</h3><p>Σάλτσα τομάτα, λουκάνικο, πατάτα</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,50</strong></div><div><small>Μεγάλη</small><strong>€12,50</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>4 Τυριά</h3><p>Σάλτσα τομάτα, gouda, φέτα, edam, παρμεζάνα</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,00</strong></div><div><small>Μεγάλη</small><strong>€11,00</strong></div></div></article>
+<article class="menu-item" data-menu-item><div><h3>Kiss Loren</h3><p>Κρέμα γάλακτος, ζαμπόν, μπέικον</p></div><div class="price-pair"><div><small>Μικρή</small><strong>€8,00</strong></div><div><small>Μεγάλη</small><strong>€11,50</strong></div></div></article>
+</div>
+<div class="extra-box"><h4>Extra υλικά</h4><div class="extra-list">
+<div class="extra-row"><span>Φέτα</span><b>€0,80</b></div>
+<div class="extra-row"><span>Gouda</span><b>€1,00</b></div>
+<div class="extra-row"><span>Παρμεζάνα</span><b>€0,80</b></div>
+<div class="extra-row"><span>Philadelphia</span><b>€2,00</b></div>
+<div class="extra-row"><span>Ζαμπόν</span><b>€1,00</b></div>
+<div class="extra-row"><span>Μπέικον</span><b>€1,00</b></div>
+<div class="extra-row"><span>Λουκάνικο</span><b>€1,00</b></div>
+<div class="extra-row"><span>Pepperone</span><b>€1,00</b></div>
+<div class="extra-row"><span>Κοτόπουλο</span><b>€1,00</b></div>
+<div class="extra-row"><span>Σουτζούκι</span><b>€1,50</b></div>
+<div class="extra-row"><span>Αυγό</span><b>€0,80</b></div>
+<div class="extra-row"><span>Μανιτάρια</span><b>€0,80</b></div>
+<div class="extra-row"><span>Πιπεριά</span><b>€0,50</b></div>
+<div class="extra-row"><span>Τομάτα</span><b>€0,50</b></div>
+<div class="extra-row"><span>Κρεμμύδι</span><b>€0,50</b></div>
+<div class="extra-row"><span>Πατάτα</span><b>€1,00</b></div>
+<div class="extra-row"><span>Ελιές</span><b>€0,50</b></div>
+</div></div>
+</section>
+
+<section class="menu-section reveal" id="peinirli" data-menu-section>
+<div class="menu-section-title"><div><span>03</span><h2>ΠΕΪΝΙΡΛΙ</h2></div><small>2 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Απλό</h3><p>Σάλτσα τομάτα, τυρί</p></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Special</h3><p>Σάλτσα τομάτα, τυρί, ζαμπόν, μπέικον, μανιτάρια, πιπεριά</p></div><strong>€4,50</strong></article>
+</div>
+<div class="extra-box"><h4>Extra υλικά</h4><div class="extra-list">
+<div class="extra-row"><span>Ζαμπόν</span><b>€0,50</b></div>
+<div class="extra-row"><span>Μπέικον</span><b>€0,50</b></div>
+<div class="extra-row"><span>Μανιτάρια</span><b>€0,50</b></div>
+<div class="extra-row"><span>Πιπεριά</span><b>€0,20</b></div>
+<div class="extra-row"><span>Τομάτα</span><b>€0,20</b></div>
+<div class="extra-row"><span>Κρεμμύδι</span><b>€0,20</b></div>
+<div class="extra-row"><span>Φέτα</span><b>€0,50</b></div>
+<div class="extra-row"><span>Ελιά</span><b>€0,50</b></div>
+<div class="extra-row"><span>Αυγό</span><b>€0,80</b></div>
+<div class="extra-row"><span>Λουκάνικο</span><b>€0,50</b></div>
+<div class="extra-row"><span>Pepperone</span><b>€0,50</b></div>
+</div></div>
+</section>
+
+<section class="menu-section reveal" id="burgers" data-menu-section>
+<div class="menu-section-title"><div><span>04</span><h2>BURGER</h2></div><small>4 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Classic</h3><p>Μοσχαρίσιο μπιφτέκι, μπέικον, τομάτα, μαρούλι, cheddar, σως</p></div><strong>€6,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Cheese</h3><p>Μοσχαρίσιο μπιφτέκι, μπέικον, cheddar</p></div><strong>€6,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Chicken bites</h3><p>Κοτομπουκιές, παρμεζάνα, τομάτα, μαρούλι</p></div><strong>€7,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Philadelphia</h3><p>Μοσχαρίσιο μπιφτέκι, Philadelphia, μπέικον, παρμεζάνα, τομάτα, μαρούλι</p></div><strong>€7,00</strong></article>
+</div>
+</section>
+
+<section class="menu-section reveal" id="club-sandwich" data-menu-section>
+<div class="menu-section-title"><div><span>05</span><h2>CLUB SANDWICH</h2></div><small>3 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Classic</h3><p>Τυρί, ζαμπόν ή γαλοπούλα, μπέικον, τομάτα, μαρούλι, μαγιονέζα</p></div><strong>€7,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κοτόπουλο</h3><p>Τυρί, κοτόπουλο, μπέικον, τομάτα, μαρούλι, μαγιονέζα</p></div><strong>€7,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Chicken Bites</h3><p>Τυρί, κοτομπουκιές, μπέικον, τομάτα, μαρούλι</p></div><strong>€7,50</strong></article>
+</div>
+<p class="menu-note">Όλα τα burgers και τα club sandwiches συνοδεύονται από πατάτες τηγανητές.</p>
+</section>
+
+<section class="menu-section reveal" id="snacks" data-menu-section>
+<div class="menu-section-title"><div><span>06</span><h2>SNACKS</h2></div><small>12 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Τυρόπιτα</h3></div><strong>€1,40</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Σπανακόπιτα χωριάτικη</h3></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Μπουγάτσα κρέμα</h3></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κρουασάν special</h3><p>Ζαμπόν &amp; τυρί ή σοκολάτα</p></div><strong>€2,80</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κρουασάν βουτύρου</h3></div><strong>€2,20</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Λουκανικόπιτα</h3></div><strong>€1,80</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Ποικιλία</h3><p>Κοτομπουκιές, πατάτες, τυροκροκέτες, ψωμί, ρολό παστουρμά</p></div><strong>€8,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Πατάτες απλές</h3><p>Μερίδα</p></div><strong>€3,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Πατάτες country</h3><p>Μερίδα</p></div><strong>€4,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κρέπες με σοκολάτα / bueno</h3><p>+ μπισκότο ή μπανάνα: €0,50</p></div><strong>€4,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κοτομπουκιές</h3><p>Μερίδα</p></div><strong>€6,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Τυροκροκέτες</h3><p>Μερίδα</p></div><strong>€5,50</strong></article>
+</div>
+</section>
+
+<section class="menu-section reveal" id="hot-dog" data-menu-section>
+<div class="menu-section-title"><div><span>07</span><h2>HOT DOG</h2></div><small>2 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Classic</h3><p>Λουκάνικο, κέτσαπ, μουστάρδα</p></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Extra</h3><p>Λουκάνικο, πατάτες, κέτσαπ, μουστάρδα</p></div><strong>€2,50</strong></article>
+</div>
+</section>
+
+<section class="menu-section reveal" id="sandwiches" data-menu-section>
+<div class="menu-section-title"><div><span>08</span><h2>ΣΑΝΤΟΥΙΤΣ</h2></div><small>4 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Τοστ</h3><p>Ζαμπόν ή γαλοπούλα, τυρί</p></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Απλό</h3><p>Ψωμί πολυτελείας, ζαμπόν, τυρί, τομάτα, μαρούλι, μαγιονέζα</p></div><strong>€4,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Chicken bites</h3><p>Ψωμί πολυτελείας, κοτομπουκιές, τυρί, τομάτα, μαρούλι, μαγιονέζα ή σως μουστάρδας</p></div><strong>€5,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Μπιφτέκι</h3><p>Ψωμί πολυτελείας, μπιφτέκι μοσχαρίσιο, τυρί, τομάτα, μαρούλι, μαγιονέζα ή κέτσαπ</p></div><strong>€5,00</strong></article>
+</div>
+<div class="extra-box"><h4>Extra υλικά</h4><div class="extra-list">
+<div class="extra-row"><span>Ζαμπόν</span><b>€1,00</b></div>
+<div class="extra-row"><span>Μπέικον</span><b>€1,00</b></div>
+<div class="extra-row"><span>Αυγό</span><b>€0,80</b></div>
+<div class="extra-row"><span>Κοτομπουκιές</span><b>€1,00</b></div>
+<div class="extra-row"><span>Τομάτα</span><b>€0,30</b></div>
+<div class="extra-row"><span>Μαρούλι</span><b>€0,50</b></div>
+<div class="extra-row"><span>Πατάτες</span><b>€0,50</b></div>
+</div></div>
+</section>
+
+<div class="menu-empty" data-menu-empty hidden><h3>Δεν βρέθηκε κάτι.</h3><p>Δοκιμάστε άλλη λέξη ή καθαρίστε την αναζήτηση.</p><button class="btn btn-dark" type="button" data-clear-search>Καθαρισμός</button></div>
+</div>
 <section class="menu-cta">
 <div class="container">
 <div>

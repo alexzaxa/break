@@ -75,34 +75,79 @@
 </div>
 </div>
 </section>
-<section class="construction-notice" aria-labelledby="coffee-menu-status">
-<div class="container construction-card">
-<div class="construction-icon" aria-hidden="true"><span>🚧</span></div>
+<section class="menu-tools" id="menu-list">
+<div class="container">
+<div class="menu-search">
+<label for="menu-search-input">Αναζήτηση στο menu</label>
 <div>
-<p class="eyebrow">ΣΥΝΤΟΜΑ ΚΟΝΤΑ ΣΑΣ</p>
-<h2 id="coffee-menu-status">Το menu Coffee είναι υπό κατασκευή.</h2>
-<p>Ετοιμάζουμε όλες τις επιλογές και τις τιμές. Μέχρι να ολοκληρωθεί, καλέστε μας για το σημερινό menu και τη διαθεσιμότητα.</p>
+<input id="menu-search-input" type="search" placeholder="π.χ. espresso, μπύρα, κρασί..." autocomplete="off" data-menu-search>
+<button type="button" data-clear-search aria-label="Καθαρισμός αναζήτησης">×</button>
 </div>
-<a class="btn btn-primary" href="tel:+302295152112">Ρώτησε μας ↗</a>
+<p aria-live="polite" data-search-status></p>
+</div>
+<nav class="category-chips" aria-label="Κατηγορίες">
+<a href="#coffee" data-category-link>ΚΑΦΕΔΕΣ &amp; ΡΟΦΗΜΑΤΑ</a>
+<a href="#drinks" data-category-link>ΠΟΤΑ</a>
+<a href="#beers" data-category-link>ΜΠΥΡΕΣ</a>
+</nav>
 </div>
 </section>
-<section class="container offering-grid">
-<article>
-<span>01</span>
-<h2>Hot coffee</h2>
-<p>Espresso-based και κλασικές ζεστές επιλογές.</p>
-</article>
-<article>
-<span>02</span>
-<h2>Cold coffee</h2>
-<p>Δροσερές επιλογές για κάθε ώρα της ημέρας.</p>
-</article>
-<article>
-<span>03</span>
-<h2>With food</h2>
-<p>Συνδύασε τον καφέ σου με τις διαθέσιμες επιλογές φαγητού.</p>
-</article>
+<div class="container menu-page-layout">
+
+<section class="menu-section reveal" id="coffee" data-menu-section>
+<div class="menu-section-title"><div><span>01</span><h2>ΚΑΦΕΔΕΣ &amp; ΡΟΦΗΜΑΤΑ</h2></div><small>14 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Ελληνικός μονός</h3></div><strong>€1,70</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Ελληνικός διπλός</h3></div><strong>€2,20</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Espresso Μονό</h3></div><strong>€1,80</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Espresso Διπλό</h3><p>Freddo, Decaf</p></div><strong>€2,20</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Cappuccino Μονό</h3><p>Freddo, Decaf</p></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Cappuccino Διπλό</h3><p>Freddo, Decaf</p></div><strong>€2,40</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Latte Caffe</h3></div><strong>€2,40</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Americano</h3></div><strong>€2,20</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Nescafe</h3></div><strong>€2,20</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Σοκολάτα</h3><p>Ζεστή ή κρύα</p></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Χυμός πορτοκάλι φυσικός</h3></div><strong>€2,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Γρανίτα φράουλα</h3></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Αναψυκτικά 330ml</h3><p>Coca-Cola, Πορτοκαλάδα μπλε/κόκκινη, Λεμονίτα, Γκαζόζα, Σόδα, Tonic Water</p></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Νερό 500ml</h3></div><strong>€0,50</strong></article>
+</div>
 </section>
+
+<section class="menu-section reveal" id="drinks" data-menu-section>
+<div class="menu-section-title"><div><span>02</span><h2>ΠΟΤΑ</h2></div><small>13 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Ποτό</h3></div><strong>€5,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Ποτό Special</h3></div><strong>€7,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Φιάλη</h3></div><strong>€60,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Φιάλη Special</h3></div><strong>€80,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Τσίπουρο χύμα 50ml</h3></div><strong>€2,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Τσίπουρο χύμα 250ml</h3></div><strong>€8,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Τσίπουρο συσκευασμένο 50ml</h3></div><strong>€3,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Τσίπουρο συσκευασμένο 250ml</h3></div><strong>€9,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Ούζο συσκευασμένο 50ml</h3></div><strong>€2,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Ούζο συσκευασμένο 250ml</h3></div><strong>€9,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κρασί χύμα 1/4</h3><p>Λευκό, ροζέ ή κόκκινο</p></div><strong>€2,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κρασί χύμα 1/2</h3><p>Λευκό, ροζέ ή κόκκινο</p></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Κρασί χύμα 1 κιλό</h3><p>Λευκό, ροζέ ή κόκκινο</p></div><strong>€6,00</strong></article>
+</div>
+</section>
+
+<section class="menu-section reveal" id="beers" data-menu-section>
+<div class="menu-section-title"><div><span>03</span><h2>ΜΠΥΡΕΣ</h2></div><small>7 επιλογές</small></div>
+<div class="menu-items">
+<article class="menu-item" data-menu-item><div><h3>Άλφα</h3></div><strong>€3,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Heineken</h3></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Μάμμος</h3></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Amstel</h3></div><strong>€3,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Fischer</h3></div><strong>€3,50</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Fix</h3></div><strong>€3,00</strong></article>
+<article class="menu-item" data-menu-item><div><h3>Kaiser</h3></div><strong>€3,50</strong></article>
+</div>
+</section>
+
+<div class="menu-empty" data-menu-empty hidden><h3>Δεν βρέθηκε κάτι.</h3><p>Δοκιμάστε άλλη λέξη ή καθαρίστε την αναζήτηση.</p><button class="btn btn-dark" type="button" data-clear-search>Καθαρισμός</button></div>
+</div>
 </main>
 <footer class="site-footer">
 <div class="container footer-grid">
